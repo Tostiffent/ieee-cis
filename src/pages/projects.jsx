@@ -68,6 +68,12 @@ export default function Projects() {
                       >
                         Year
                       </th>
+                      <th
+                        scope="col"
+                        class="border-r px-6 py-4 text-left text-sm font-bold text-gray-900"
+                      >
+                        Students
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -92,6 +98,10 @@ export default function Projects() {
                       <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
                         2022
                       </td>
+                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
+                        Aastha Singh<br/>Amitesh Verma<br/>Amith M<br/>Ayush Jain<br/>Bhavya>br/>
+                        Dhatvik<br/>Divyam<br/>Nanditha S<br/>Rohan<br/>Samprathi H<br/>Shilpa H
+                      </td>
                     </tr>
                     <tr class="border-b-2 font-semibold">
                       <td class="whitespace-nowrap border-r border-l px-6 py-4 text-sm font-medium text-gray-900">
@@ -112,6 +122,9 @@ export default function Projects() {
                       </td>
                       <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
                         2022
+                      </td>
+                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
+                        Dhatvik M.P<br/>Kavan A.V<br/>Nandan<br/>Jayant<br/>Iram>br/>
                       </td>
                     </tr>
                     <tr class="border-b-2 bg-white">
