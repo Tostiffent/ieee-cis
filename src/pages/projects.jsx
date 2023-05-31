@@ -102,11 +102,10 @@ export default function Projects() {
                         for the Blind Using Computer Vision
                       </td>
                       <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        EPICS in IEEE
+                        IEEE
                       </td>
                       <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Dr. Megha.P.Arakeri<br></br> Dr.Vijaya Kumar B.P
-                        <br></br> Dr. Sumana. M
+                        Dr. Megha.P.Arakeri
                       </td>
                       <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
                         $4,400.29
