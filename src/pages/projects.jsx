@@ -99,7 +99,7 @@ export default function Projects() {
                         2022
                       </td>
                       <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Aastha Singh<br/>Amitesh Verma<br/>Amith M<br/>Ayush Jain<br/>Bhavya>br/>
+                        Aastha Singh<br/>Amitesh Verma<br/>Amith M<br/>Ayush Jain<br/>Bhavya<br/>
                         Dhatvik<br/>Divyam<br/>Nanditha S<br/>Rohan<br/>Samprathi H<br/>Shilpa H
                       </td>
                     </tr>
