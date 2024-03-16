@@ -124,7 +124,7 @@ export default function Projects() {
                         2022
                       </td>
                       <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Dhatvik M.P<br/>Kavan A.V<br/>Nandan<br/>Jayant<br/>Iram>br/>
+                        Dhatvik M.P<br/>Kavan A.V<br/>Nandan<br/>Jayant<br/>Iram>
                       </td>
                     </tr>
                     <tr class="border-b-2 bg-white">
