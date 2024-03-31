@@ -7,16 +7,16 @@ import { Input } from '@/components/Input'
 import { Logo } from '@/components/Logo'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer1'
-import img1 from '@/images/members/vinutha.png'
+import img1 from '@/images/members/manjunath.png'
 import img2 from '@/images/members/megha.png'
 import img3 from '@/images/members/vijayakumar.png'
 import img4 from '@/images/members/sumana.png'
-import img5 from '@/images/members/kishore.png'
+import img5 from '@/images/members/mohan.png'
 
 const members = [
   {
     name: 'Dr. Vijaya Kumar B. P',
-    designation: 'Advisor',
+    designation: 'Past Chair and Advisor',
     description:
       'Dr. Vijay Kumar is a Professor with research experience of 20+ Yrs in the areas of Cognitive and Mobile Computing. Technical Advisor for Heart Rescue India & Road Traffic Injuries, National Task force project, Advisor, IEEE CIS, Bangalore section.',
     image: img3,
@@ -24,31 +24,29 @@ const members = [
   },
   {
     name: 'Dr. Megha. P. Arakeri',
-    designation: 'Chair',
+    designation: 'Vice Chair',
     description:
       'Dr. Megha Arakeri has a Ph.D from NITK, Surathkal. Working as Associate Professor in MSRIT with 18 years of teaching and research experience in the areas of Computer Vision.',
     image: img2,
     profile: '/documents/Megha-profile.pdf',
   },
   {
-    name: 'Mr. A. T. Kishore',
-    designation: 'Vice Chair',
-    description:
-      'Flight lieutenant AT Kishore is currently serving as an  COO of Paramount Exhibitors. He is interested in subjects related to Optical Fiber Technologies, UAV Industries and  CDMA technologies. He is senior professional member of IEEE and on the smart city advisory committee of IEEE',
+    name: 'Dr. Mohan Gowda',
+    designation: 'Treasurer',
+    description: 'Description',
     image: img5,
-    profile: '/documents/Kishore-profile.pdf',
+    profile: '/documents/Mohan-profile.pdf',
   },
   {
-    name: 'Dr. Vinutha. D.C',
+    name: 'Dr. Manjunath R Kounte',
     designation: 'Secretary',
-    description:
-      'Dr. Vinutha DC is a Ph. D degree holder from VTU and is currently serving as an  professor and head in CSE AI/ML at VVCE. She is interested in subjects related to Data Analytics, Machine Learning, Big Data and Computer Networks',
+    description: 'Description',
     image: img1,
-    profile: '/documents/Vinutha-profile.pdf',
+    profile: '/documents/Manjunath-profile.pdf',
   },
   {
     name: 'Dr. Sumana. M',
-    designation: 'Treasurer',
+    designation: 'Chair',
     description:
       'Dr. Sumana Maradithaya is a Ph. D degree holder from Manipal University and is currently serving as an associate professor in IS&E department of MSRIT. She is interested in subjects related to Data Mining , Data Science and Analytics, Machine Learning and Deep Learning',
     image: img4,
