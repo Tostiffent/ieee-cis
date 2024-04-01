@@ -7,42 +7,42 @@ import { Input } from '@/components/Input'
 import { Logo } from '@/components/Logo'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer1'
-import img1 from '@/images/members/vinutha.png'
+import img1 from '@/images/members/manjunath.png'
 import img2 from '@/images/members/megha.png'
 import img3 from '@/images/members/vijayakumar.png'
 import img4 from '@/images/members/sumana.png'
-import img5 from '@/images/members/kishore.png'
+import img5 from '@/images/members/mohan.png'
 
 const members = [
+  {
+    name: 'Dr. Sumana. M',
+    designation: 'Chair',
+    image: img4,
+    profile: '/documents/Sumana-profile.pdf',
+  },
   {
     name: 'Dr. Vijaya Kumar B. P',
     designation: 'Advisor',
     image: img3,
-    profile: '/documents/Vijayakumar-profile.pdf',
+    profile: '/documents/Vijaya Kumar-profile.pdf',
   },
   {
     name: 'Dr. Megha. P. Arakeri',
-    designation: 'Chair',
+    designation: 'Vice Chair',
     image: img2,
     profile: '/documents/Megha-profile.pdf',
   },
   {
-    name: 'Mr. A. T. Kishore',
-    designation: 'Vice Chair',
+    name: 'Dr. Mohan Gowda',
+    designation: 'Treasurer'
     image: img5,
-    profile: '/documents/Kishore-profile.pdf',
+    profile: '/documents/Mohan-profile.pdf',
   },
   {
-    name: 'Dr. Vinutha. D.C',
+    name: 'Dr. Manjunath R Kounte',
     designation: 'Secretary',
     image: img1,
-    profile: '/documents/Vinutha-profile.pdf',
-  },
-  {
-    name: 'Dr. Sumana. M',
-    designation: 'Treasurer',
-    image: img4,
-    profile: '/documents/Sumana-profile.pdf',
+    profile: '/documents/Manjunath-profile.pdf',
   },
 ]
 const ececommembers = [
