@@ -15,8 +15,16 @@ import img5 from '@/images/members/mohan.png'
 
 const members = [
   {
+    name: 'Dr. Sumana. M',
+    designation: 'Chair',
+    description:
+      'Dr. Sumana Maradithaya is a Ph. D degree holder from Manipal University and is currently serving as an associate professor in IS&E department of MSRIT. She is interested in subjects related to Data Mining , Data Science and Analytics, Machine Learning and Deep Learning',
+    image: img4,
+    profile: '/documents/Sumana-profile.pdf',
+  },
+  {
     name: 'Dr. Vijaya Kumar B. P',
-    designation: 'Past Chair and Advisor',
+    designation: 'Advisor',
     description:
       'Dr. Vijay Kumar is a Professor with research experience of 20+ Yrs in the areas of Cognitive and Mobile Computing. Technical Advisor for Heart Rescue India & Road Traffic Injuries, National Task force project, Advisor, IEEE CIS, Bangalore section.',
     image: img3,
@@ -43,14 +51,6 @@ const members = [
     description: 'Description',
     image: img1,
     profile: '/documents/Manjunath-profile.pdf',
-  },
-  {
-    name: 'Dr. Sumana. M',
-    designation: 'Chair',
-    description:
-      'Dr. Sumana Maradithaya is a Ph. D degree holder from Manipal University and is currently serving as an associate professor in IS&E department of MSRIT. She is interested in subjects related to Data Mining , Data Science and Analytics, Machine Learning and Deep Learning',
-    image: img4,
-    profile: '/documents/Sumana-profile.pdf',
   },
 ]
 
