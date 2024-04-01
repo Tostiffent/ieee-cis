@@ -34,7 +34,7 @@ const members = [
   },
   {
     name: 'Dr. Mohan Gowda',
-    designation: 'Treasurer'
+    designation: 'Treasurer',
     image: img5,
     profile: '/documents/Mohan-profile.pdf',
   },
