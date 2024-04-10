@@ -15,32 +15,40 @@ import img5 from '@/images/members/mohan.png'
 
 const members = [
   {
-    name: 'Dr. Sumana. M',
-    designation: 'Chair',
-    image: img4,
-    profile: '/documents/Sumana-profile.pdf',
-  },
-  {
     name: 'Dr. Vijaya Kumar B. P',
     designation: 'Advisor',
+    description:
+      'Dr. Vijay Kumar is a Professor with research experience of 20+ Yrs in the areas of Cognitive and Mobile Computing. Technical Advisor for Heart Rescue India & Road Traffic Injuries, National Task force project, Advisor, IEEE CIS, Bangalore section.',
     image: img3,
     profile: '/documents/Vijaya Kumar-profile.pdf',
   },
   {
+    name: 'Dr. Sumana. M',
+    designation: 'Chair',
+    description:
+      'Dr. Sumana Maradithaya is a Ph. D degree holder from Manipal University and is currently serving as an associate professor in IS&E department of MSRIT. She is interested in subjects related to Data Mining , Data Science and Analytics, Machine Learning and Deep Learning',
+    image: img4,
+    profile: '/documents/Sumana-profile.pdf',
+  },
+  {
     name: 'Dr. Megha. P. Arakeri',
     designation: 'Vice Chair',
+    description:
+      'Dr. Megha Arakeri has a Ph.D from NITK, Surathkal. Working as Associate Professor in MSRIT with 18 years of teaching and research experience in the areas of Computer Vision.',
     image: img2,
     profile: '/documents/Megha-profile.pdf',
   },
   {
     name: 'Dr. Mohan Gowda',
     designation: 'Treasurer',
+    description: 'Description',
     image: img5,
     profile: '/documents/Mohan-profile.pdf',
   },
   {
     name: 'Dr. Manjunath R Kounte',
     designation: 'Secretary',
+    description: 'Description',
     image: img1,
     profile: '/documents/Manjunath-profile.pdf',
   },
