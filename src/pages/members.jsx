@@ -15,20 +15,20 @@ import img5 from '@/images/members/mohan.png'
 
 const members = [
   {
-    name: 'Dr. Sumana. M',
-    designation: 'Chair',
-    description:
-      'Dr. Sumana Maradithaya is a Ph. D degree holder from Manipal University and is currently serving as an associate professor in IS&E department of MSRIT. She is interested in subjects related to Data Mining , Data Science and Analytics, Machine Learning and Deep Learning',
-    image: img4,
-    profile: '/documents/Sumana-profile.pdf',
-  },
-  {
     name: 'Dr. Vijaya Kumar B. P',
     designation: 'Advisor',
     description:
       'Dr. Vijay Kumar is a Professor with research experience of 20+ Yrs in the areas of Cognitive and Mobile Computing. Technical Advisor for Heart Rescue India & Road Traffic Injuries, National Task force project, Advisor, IEEE CIS, Bangalore section.',
     image: img3,
     profile: '/documents/Vijaya Kumar-profile.pdf',
+  },
+  {
+    name: 'Dr. Sumana. M',
+    designation: 'Chair',
+    description:
+      'Dr. Sumana Maradithaya is a Ph. D degree holder from Manipal University and is currently serving as an associate professor in IS&E department of MSRIT. She is interested in subjects related to Data Mining , Data Science and Analytics, Machine Learning and Deep Learning',
+    image: img4,
+    profile: '/documents/Sumana-profile.pdf',
   },
   {
     name: 'Dr. Megha. P. Arakeri',
@@ -89,7 +89,7 @@ export default function Login() {
                     </h3>
                   </div>
                 </div>
-                <p class="mt-4 text-gray-500">{member.description}</p>
+{/*                 <p class="mt-4 text-gray-500">{member.description}</p> */}
                 <div>
                   <a
                     class="buttonview text-md group mt-10 inline-flex items-center justify-center rounded bg-sky-600 py-2 px-4  text-sm font-semibold text-white shadow-md hover:bg-slate-700 hover:text-slate-100 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:bg-slate-800 active:text-slate-300"
