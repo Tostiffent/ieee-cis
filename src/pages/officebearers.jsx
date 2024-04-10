@@ -19,36 +19,34 @@ const members = [
     profile: '/documents/Vijaya Kumar-profile.pdf',
   },
   {
-    name: 'Dr. Megha. P. Arakeri',
+    name: 'Dr. Sumana. M',
     designation: 'Chair',
+    description:
+      'Dr. Sumana Maradithaya is a Ph. D degree holder from Manipal University and is currently serving as an associate professor in IS&E department of MSRIT. She is interested in subjects related to Data Mining , Data Science and Analytics, Machine Learning and Deep Learning',
+    image: img4,
+    profile: '/documents/Sumana-profile.pdf',
+  },
+  {
+    name: 'Dr. Megha. P. Arakeri',
+    designation: 'Vice Chair',
     description:
       'Dr. Megha Arakeri has a Ph.D from NITK, Surathkal. Working as Associate Professor in MSRIT with 18 years of teaching and research experience in the areas of Computer Vision.',
     image: img2,
     profile: '/documents/Megha-profile.pdf',
   },
   {
-    name: 'Mr. A. T. Kishore',
-    designation: 'Vice Chair',
-    description:
-      'Flight lieutenant AT Kishore is currently serving as an  COO of Paramount Exhibitors. He is interested in subjects related to Optical Fiber Technologies, UAV Industries and  CDMA technologies. He is senior professional member of IEEE and on the smart city advisory committee of IEEE',
-    image: img5,
-    profile: '/documents/Kishore-profile.pdf',
-  },
-  {
-    name: 'Dr. Vinutha. D.C',
-    designation: 'Secretary',
-    description:
-      'Dr. Vinutha DC is a Ph. D degree holder from VTU and is currently serving as an  professor and head in CSE AI/ML at VVCE. She is interested in subjects related to Data Analytics, Machine Learning, Big Data and Computer Networks',
-    image: img1,
-    profile: '/documents/Vinutha-profile.pdf',
-  },
-  {
-    name: 'Dr. Sumana. M',
+    name: 'Dr. Mohan Gowda',
     designation: 'Treasurer',
-    description:
-      'Dr. Sumana Maradithaya is a Ph. D degree holder from Manipal University and is currently serving as an associate professor in IS&E department of MSRIT. She is interested in subjects related to Data Mining , Data Science and Analytics, Machine Learning and Deep Learning',
-    image: img4,
-    profile: '/documents/Sumana-profile.pdf',
+    description: 'Description',
+    image: img5,
+    profile: '/documents/Mohan-profile.pdf',
+  },
+  {
+    name: 'Dr. Manjunath R Kounte',
+    designation: 'Secretary',
+    description: 'Description',
+    image: img1,
+    profile: '/documents/Manjunath-profile.pdf',
   },
 ]
 
