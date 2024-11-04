@@ -80,7 +80,7 @@ export default function Login() {
               role="list"
               className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-10 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-2"
             >
-              <li className="neumorphism mb-10 rounded-2xl border border-gray-200 p-5">
+              <li className="neumorphism mb-10  rounded-2xl border border-gray-200 p-5">
                 <h3 className="text-center text-3xl font-semibold text-gray-900">
                   Events 2020
                 </h3>
@@ -204,7 +204,7 @@ export default function Login() {
               </li>
               <li className="neumorphism mb-10 rounded-2xl border border-gray-200 p-5">
                 <h3 className="text-center text-3xl font-semibold text-gray-900">
-                  Summer School 2023
+                  Events 2023
                 </h3>
                 <p className="mt-2 text-center text-gray-700">
                   Practical Approaches in Computational Intelligence.
@@ -236,6 +236,45 @@ export default function Login() {
                       href="/documents/Web_Pagefor_IEEE-CIS Summer School.docx"
                       target="_blank"
                       rel="noreferrer"
+                      class="flex w-full transform items-center justify-center rounded-md bg-blue-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="mx-1 h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                        />
+                      </svg>
+                      <span class="mx-1">View</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li className="neumorphism mb-10  rounded-2xl border border-gray-200 p-5">
+                <h3 className="text-center text-3xl font-semibold text-gray-900">
+                  Events 2024
+                </h3>
+                <p className="mt-2 text-center text-gray-700">
+                  Activities conducted for the year 2023-2024 under IEEE CIS
+                </p>
+                <div class="flex justify-center overflow-hidden p-2 ">
+                  <div class="space-y-2 rounded-lg border border-gray-200 p-4 sm:-mx-1 sm:flex sm:space-y-0">
+                  
+                    <a
+                      href="/events-2024"
                       class="flex w-full transform items-center justify-center rounded-md bg-blue-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
                     >
                       <svg
