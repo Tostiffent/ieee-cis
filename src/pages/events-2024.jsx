@@ -15,7 +15,7 @@ export default function Events() {
         "https://github.com/sanjay212003/cis-2024-events/blob/main/activity-1.1.png?raw=true",
         "https://github.com/sanjay212003/cis-2024-events/blob/main/activity-1.2.png?raw=true",
       ],
-      reportUrl: "/reports/event1.pdf", // Example report URL for downloading
+      reportUrl: "/documents/Events reports 2024/UXForge.pdf", // Example report URL for downloading
     },
     {
       id: 2,
@@ -26,7 +26,7 @@ export default function Events() {
         "https://github.com/sanjay212003/cis-2024-events/blob/main/activity-2.1.png?raw=true",
         "https://github.com/sanjay212003/cis-2024-events/blob/main/activity-2.2.png?raw=true",
       ],
-      reportUrl: "/reports/event2.pdf",
+      reportUrl: "/documents/Events reports 2024/NetWorth.pdf",
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ export default function Events() {
       date: "20-02-2024",
       description: "REVA UNIVERSITY",
       images: ["https://github.com/sanjay212003/cis-2024-events/blob/main/activity-3.1.png?raw=true","https://github.com/sanjay212003/cis-2024-events/blob/main/activity-3.2.png?raw=true"],
-      reportUrl: "/reports/event2.pdf",
+      reportUrl: "/documents/Events reports 2024/scholar's canvas.pdf",
     },
     {
         id: 4,
@@ -42,7 +42,7 @@ export default function Events() {
         date: "15-02-2024 to 17-02-2024",
         description: "MITB",
         images: ["https://github.com/sanjay212003/cis-2024-events/blob/main/activity-4.1.png?raw=true","https://github.com/sanjay212003/cis-2024-events/blob/main/activity-4.2.png?raw=true"],
-        reportUrl: "/reports/event2.pdf",
+        reportUrl: "/documents/Events reports 2024/ENTERPRISE APPLICATION DEVELOPMENT.pdf",
       },
       {
         id: 5,
@@ -50,7 +50,7 @@ export default function Events() {
         date: "26-02-2024 to 01-03-2024",
         description: "Ramaiah Institute of Technology",
         images: ["https://github.com/sanjay212003/cis-2024-events/blob/main/activity-5.1.png?raw=true","https://github.com/sanjay212003/cis-2024-events/blob/main/activity-5.2.png?raw=true","https://github.com/sanjay212003/cis-2024-events/blob/main/activity-5.3.png?raw=true"],
-        reportUrl: "/reports/event2.pdf",
+        reportUrl: "/documents/Events reports 2024/Data visualisation.pdf",
       },
       {
         id: 6,
@@ -74,7 +74,7 @@ export default function Events() {
         date: "23-02-2024",
         description: "Sai Vidya Institute of Technology",
         images: ["https://github.com/sanjay212003/cis-2024-events/blob/main/activity-8.1.png?raw=true","https://github.com/sanjay212003/cis-2024-events/blob/main/activity-8.2.png?raw=true"],
-        reportUrl: "/reports/event2.pdf",
+        reportUrl: "/documents/Events reports 2024/Innovation hackathon.pdf",
       },
       {
         id: 9,
@@ -82,7 +82,7 @@ export default function Events() {
         date: "16-04-2024 to 18-04-2024",
         description: "Sai Vidya Institute of Technology",
         images: ["https://github.com/sanjay212003/cis-2024-events/blob/main/activity-9.1.png?raw=true","https://github.com/sanjay212003/cis-2024-events/blob/main/activity-9.2.png?raw=true"],
-        reportUrl: "/reports/event2.pdf",
+        reportUrl: "/documents/Events reports 2024/MongodB.pdf",
       },
       {
         id: 10,
@@ -90,7 +90,7 @@ export default function Events() {
         date: "23-04-2024 to 27-04-2024",
         description: "Sai Vidya Institute of Technology",
         images: ["https://github.com/sanjay212003/cis-2024-events/blob/main/activity-10.1.png?raw=true","https://github.com/sanjay212003/cis-2024-events/blob/main/activity-10.2.png?raw=true"],
-        reportUrl: "/reports/event2.pdf",
+        reportUrl: "/documents/Events reports 2024/Exploratory data analysis.pdf",
       },
       {
         id: 11,
@@ -98,7 +98,7 @@ export default function Events() {
         date: "06-05-2024",
         description: "Sai Vidya Institute of Technology",
         images: ["https://github.com/sanjay212003/cis-2024-events/blob/main/activity-11.1.png?raw=true","https://github.com/sanjay212003/cis-2024-events/blob/main/activity-11.2.png?raw=true"],
-        reportUrl: "/reports/event2.pdf",
+        reportUrl: "/documents/Events reports 2024/TRANSFORMTION JOURNEY.pdf",
       },
       {
         id: 12,
@@ -106,7 +106,7 @@ export default function Events() {
         date: "10-06-2024",
         description: "Sai Vidya Institute of Technology",
         images: ["https://github.com/sanjay212003/cis-2024-events/blob/main/activity-12.1.png?raw=true","https://github.com/sanjay212003/cis-2024-events/blob/main/activity-12.2.png?raw=true"],
-        reportUrl: "/reports/event2.pdf",
+        reportUrl: "/documents/Events reports 2024/Enterprise Technology Infrastructure.pdf",
       },
       {
         id: 13,
@@ -114,7 +114,7 @@ export default function Events() {
         date: "28-06-2024",
         description: "Sai Vidya Institute of Technology",
         images: ["https://github.com/sanjay212003/cis-2024-events/blob/main/activity-13.1.png?raw=true","https://github.com/sanjay212003/cis-2024-events/blob/main/activity-13.2.png?raw=true"],
-        reportUrl: "/reports/event2.pdf",
+        reportUrl: "/documents/Events reports 2024/Generative AI.pdf",
       },
       {
         id: 14,
@@ -156,9 +156,10 @@ export default function Events() {
   };
 
   const handleDownload = (reportUrl) => {
+    window.open(reportUrl, '_blank', 'noopener,noreferrer');
     const link = document.createElement("a");
     link.href = reportUrl;
-    link.download = reportUrl.split('/').pop();
+    link.download = reportUrl.split("\\").pop();
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -44,7 +44,7 @@ export default function Contactus() {
                   </div>
                   <div class="flex flex-col items-center justify-center text-center">
                     <h2 class="title-font mt-4 text-lg font-medium text-gray-900">
-                      Dr. Sumana Ashok
+                      Dr. Sumana M
                     </h2>
                     <p class="text-base">Chair, IEEE CIS, Bangalore Section</p>
                     <div class="mt-2 mb-4 h-1 w-12 rounded bg-sky-600"></div>
