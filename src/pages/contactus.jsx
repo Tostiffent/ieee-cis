@@ -21,40 +21,35 @@ export default function Contactus() {
           <title>Contact Us - IEEE | Computational Intelligence Society</title>
         </Head>
         <Header />
-        <section class="body-font text-gray-600 ">
-          <div class="container mx-auto flex flex-col px-5 py-12">
-            <div class="mx-auto lg:w-4/6">
-              <div class="lg:h-242 overflow-hidden rounded-xl shadow-lg sm:h-80">
-                <img
-                  alt="content"
-                  class="h-full w-full object-cover object-center"
-                  src="https://ieee-cis-sbc.org/assets/img/CIS.png"
-                />
-              </div>
-              <div class="mt-10 flex flex-col sm:flex-row">
-                <div class="text-center sm:w-1/3 sm:py-8 sm:pr-8">
-                  <div class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-gray-200 text-gray-400">
+        <section className="body-font text-gray-600 ">
+          <div className="container mx-auto flex flex-col px-5 py-12">
+            <div className="mx-auto lg:w-4/6">
+              <div className="mt-10 flex flex-col sm:flex-row">
+                <div className="text-center sm:w-1/3 sm:py-8 sm:pr-8">
+                  <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-gray-200 text-gray-400">
                     <Image
                       alt="team"
-                      class="mr-4 h-16 w-16 flex-shrink-0 rounded-full bg-gray-100 object-cover object-center"
+                      className="mr-4 h-16 w-16 flex-shrink-0 rounded-full bg-gray-100 object-cover object-center"
                       src={img2}
                       height={78}
                       width={78}
                     />
                   </div>
-                  <div class="flex flex-col items-center justify-center text-center">
-                    <h2 class="title-font mt-4 text-lg font-medium text-gray-900">
+                  <div className="flex flex-col items-center justify-center text-center">
+                    <h2 className="title-font mt-4 text-lg font-medium text-gray-900">
                       Dr. Sumana M
                     </h2>
-                    <p class="text-base">Chair, IEEE CIS, Bangalore Section</p>
-                    <div class="mt-2 mb-4 h-1 w-12 rounded bg-sky-600"></div>
-                    <p class="text-dark flex items-center text-sm font-medium">
-                      <span class="text-primary mr-3">
+                    <p className="text-base">
+                      Chair, IEEE CIS, Bangalore Section
+                    </p>
+                    <div className="mt-2 mb-4 h-1 w-12 rounded bg-sky-600"></div>
+                    <p className="text-dark flex items-center text-sm font-medium">
+                      <span className="text-primary mr-3">
                         <svg
                           width="19"
                           height="21"
                           viewBox="0 0 19 21"
-                          class="fill-current"
+                          className="fill-current"
                         >
                           <path d="M17.8076 11.8129C17.741 11.0475 17.1088 10.5151 16.3434 10.5151H2.16795C1.40261 10.5151 0.803643 11.0808 0.703816 11.8129L0.00502514 18.8008C-0.0282506 19.2001 0.104853 19.6327 0.371059 19.9322C0.637265 20.2317 1.03657 20.398 1.46916 20.398H17.0755C17.4748 20.398 17.8741 20.2317 18.1736 19.9322C18.4398 19.6327 18.5729 19.2334 18.5396 18.8008L17.8076 11.8129ZM17.2751 19.1668C17.2419 19.2001 17.1753 19.2667 17.0422 19.2667H1.46916C1.36933 19.2667 1.2695 19.2001 1.23623 19.1668C1.20295 19.1336 1.1364 19.067 1.16968 18.9339L1.86847 11.9127C1.86847 11.7463 2.00157 11.6465 2.16795 11.6465H16.3767C16.5431 11.6465 16.6429 11.7463 16.6762 11.9127L17.375 18.9339C17.3417 19.0337 17.3084 19.1336 17.2751 19.1668Z" />
                           <path d="M9.25704 13.1106C7.95928 13.1106 6.92773 14.1422 6.92773 15.4399C6.92773 16.7377 7.95928 17.7693 9.25704 17.7693C10.5548 17.7693 11.5863 16.7377 11.5863 15.4399C11.5863 14.1422 10.5548 13.1106 9.25704 13.1106ZM9.25704 16.6046C8.6248 16.6046 8.09239 16.0722 8.09239 15.4399C8.09239 14.8077 8.6248 14.2753 9.25704 14.2753C9.88928 14.2753 10.4217 14.8077 10.4217 15.4399C10.4217 16.0722 9.88928 16.6046 9.25704 16.6046Z" />
@@ -63,14 +58,14 @@ export default function Contactus() {
                       </span>
                       <span>+91 8861765345</span>
                     </p>
-                    <p class="text-dark mt-5 flex items-center text-sm font-medium">
-                      <span class="text-primary mr-3">
+                    <p className="text-dark mt-5 flex items-center text-sm font-medium">
+                      <span className="text-primary mr-3">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="19"
                           height="21"
                           fill="currentColor"
-                          class="bi bi-envelope"
+                          className="bi bi-envelope"
                           viewBox="0 0 16 16"
                         >
                           <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
@@ -78,14 +73,14 @@ export default function Contactus() {
                       </span>
                       <span>
                         <a href="mailto:sumana.a.a@gmail.com">
-                        sumana.a.a@gmail.com
+                          sumana.a.a@gmail.com
                         </a>
                       </span>
                     </p>
                   </div>
                 </div>
-                <div class="mt-4 mb-10 rounded-xl border-t border-gray-200 bg-slate-100 p-4 text-center sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left">
-                  <p class="mb-4 text-base  ">
+                <div className="mt-4 mb-10 rounded-xl border-t border-gray-200 bg-slate-100 p-4 text-center sm:mt-0 sm:w-2/3 sm:border-l sm:border-t-0 sm:py-8 sm:pl-8 sm:text-left">
+                  <p className="mb-4 text-base  ">
                     <b>IEEE Computational Intelligence Society (CIS)</b> is a
                     professional society of IEEE focusing on “the theory,
                     design, application, and development of biologically and
@@ -94,13 +89,13 @@ export default function Contactus() {
                     evolutionary programming, fuzzy systems, and hybrid
                     intelligent systems in which these paradigms are contained.
                   </p>
-                  <p class="mb-4 text-lg leading-relaxed">
+                  <p className="mb-4 text-lg leading-relaxed">
                     Registration is going on so join by clicking below
                   </p>
-                  <div class="inline-flex items-center text-sky-500">
+                  <div className="inline-flex items-center text-sky-500">
                     <button
                       type="button"
-                      class="w-full rounded-lg  bg-sky-600 py-2 px-4 text-center text-base font-semibold text-white shadow-md transition duration-200 ease-in hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2  focus:ring-offset-sky-200 "
+                      className="w-full rounded-lg  bg-sky-600 py-2 px-4 text-center text-base font-semibold text-white shadow-md transition duration-200 ease-in hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2  focus:ring-offset-sky-200 "
                     >
                       <a href="https://www.ieee.org/membership/join/index.html">
                         Join IEEE

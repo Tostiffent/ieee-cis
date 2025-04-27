@@ -6,7 +6,6 @@ import clsx from 'clsx'
 import { ButtonLink } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Logo } from '@/components/Logo'
-import { Image } from 'next/image'
 
 function MobileNavigation() {
   return (
@@ -76,14 +75,6 @@ function MobileNavigation() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/members">
-                    <a className="block w-full" onClick={() => close()}>
-                      {/* Members */}
-                      Office Bearers
-                    </a>
-                  </Link>
-                </li>
-                <li>
                   <Link href="/execom">
                     <a className="block w-full" onClick={() => close()}>
                       EXECOM
@@ -98,9 +89,9 @@ function MobileNavigation() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/newsletter">
+                  <Link href="/reports">
                     <a className="block w-full" onClick={() => close()}>
-                      Newsletter
+                      Reports
                     </a>
                   </Link>
                 </li>
@@ -118,11 +109,6 @@ function MobileNavigation() {
                     </a>
                   </Link>
                 </li>
-                {/* <li className="border-t border-slate-300/40 pt-4">
-                  <Link href="/login">
-                    <a className="block w-full">Sign in</a>
-                  </Link>
-                </li> */}
               </Popover.Panel>
             </Transition.Child>
           </Transition.Root>
@@ -146,18 +132,18 @@ export function Header() {
                 </a>
               </Link>
             </li>
-            <li className="ml-12 hidden md:block">
+            {/* Fixed the spacing by making all navigation items use the same consistent margin */}
+            <li className="ml-6 hidden md:block">
               <Link href="/">
                 <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
                   <b>Home</b>
                 </a>
               </Link>
             </li>
-            <li className="ml-12 hidden md:block">
-              <Link href="/members">
+            <li className="ml-6 hidden md:block">
+              <Link href="/execom">
                 <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  {/* Members */}
-                  Office Bearers
+                  EXECOM
                 </a>
               </Link>
             </li>
@@ -176,13 +162,6 @@ export function Header() {
               </Link>
             </li>
             <li className="ml-6 hidden md:block">
-              <Link href="/execom">
-                <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  EXECOM
-                </a>
-              </Link>
-            </li>
-            <li className="ml-6 hidden md:block">
               <Link href="/studentschapter">
                 <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
                   Students Chapter
@@ -190,9 +169,9 @@ export function Header() {
               </Link>
             </li>
             <li className="ml-6 hidden md:block">
-              <Link href="/newsletter">
+              <Link href="/reports">
                 <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  Newsletter
+                  Reports
                 </a>
               </Link>
             </li>
@@ -210,13 +189,6 @@ export function Header() {
                 </a>
               </Link>
             </li>
-            {/*  <li className="ml-auto hidden md:block">
-              <Link href="/login">
-                <a className="rounded-lg py-1 px-2 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                  Sign in
-                </a>
-              </Link>
-            </li> */}
             <li className="ml-auto md:ml-8 lg:hidden">
               <ButtonLink href="/" className="bg-sky-500/100">
                 <span>

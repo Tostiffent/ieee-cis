@@ -9,214 +9,216 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer1'
 
 export default function Projects() {
+  const projects = [
+    {
+      id: 1,
+      title: 'CIS High School Outreach Program 2025',
+      funding: 'IEEE-CIS',
+      coordinators: ['Dr Sumana M', 'Dr Lincy Meera Mathews', 'Dr Anitha P'],
+      amount: '$4000',
+      year: '2025',
+      students: ['Yet to be held'],
+    },
+    {
+      id: 2,
+      title: 'Interaction with Local Industry Event',
+      funding: 'IEEE-CIS',
+      coordinators: ['Dr Sumana M'],
+      amount: '$3182',
+      year: '2024',
+      students: [
+        'Nikitha Singhh',
+        'Narendra V S',
+        'Suprith Patil (NMIT)',
+        'Dr Manju Khanna',
+        'Dr Soumya B J',
+        'Dr Vijaya Kumar B P',
+      ],
+    },
+    {
+      id: 3,
+      title: 'Computational Intelligence High School Education',
+      funding: 'IEEE-CIS',
+      coordinators: [
+        'Dr Sumana M',
+        'Dr Lincy Meera Mathews',
+        'Dr Vijaya Kumar B P',
+      ],
+      amount: '$2002',
+      year: '2024',
+      students: [
+        'Chamili Suresh ',
+        'Bontha Nithish Reddy ',
+        'Cherukupalli Sri Ramya ',
+        'Alapati Nikhila Divya ',
+      ],
+    },
+    {
+      id: 4,
+      title:
+        'Development of Solar Powered Information Kiosk for Rural Community Empowerment in South Karnataka',
+      funding: 'IEEE',
+      coordinators: ['Dr. Megha.P.Arakeri'],
+      amount: '$4796',
+      year: '2022',
+      students: [
+        'Aastha Singh',
+        'Amitesh Verma',
+        'Amith M',
+        'Ayush Jain',
+        'Bhavya',
+        'Dhatvik',
+        'Divyam',
+        'Nanditha S',
+        'Rohan',
+        'Samprathi H',
+        'Shilpa H',
+      ],
+    },
+    {
+      id: 5,
+      title:
+        'Design and Development of Head-Mounted Assistive Device for the Blind Using Computer Vision',
+      funding: 'IEEE',
+      coordinators: ['Dr. Megha.P.Arakeri'],
+      amount: '$4,400.29',
+      year: '2022',
+      students: ['Dhatvik M.P', 'Kavan A.V', 'Nandan', 'Jayant', 'Iram'],
+    },
+    {
+      id: 6,
+      title: 'Local Industry Interactions',
+      funding: 'IEEE CIS',
+      coordinators: [
+        'Dr.Vijaya Kumar B.P',
+        'Dr. Sumana. M',
+        'Dr. Megha.P.Arakeri',
+      ],
+      amount: '$3988.66',
+      year: '2021',
+      students: [],
+    },
+    {
+      id: 7,
+      title: 'High School Outreach Program',
+      funding: 'IEEE CIS',
+      coordinators: [
+        'Dr. Megha.P.Arakeri',
+        'Dr. Vijaya Kumar B. P',
+        'Dr. Sumana. M',
+      ],
+      amount: '$1500',
+      year: '2021',
+      students: [],
+    },
+    {
+      id: 8,
+      title: 'Local Industry Interactions',
+      funding: 'IEEE CIS',
+      coordinators: ['Dr.Vijaya Kumar B.P', 'Dr. Megha.P.Arakeri'],
+      amount: '$1570.85',
+      year: '2020',
+      students: [],
+    },
+    {
+      id: 9,
+      title: 'High School Outreach Program',
+      funding: 'IEEE CIS',
+      coordinators: ['Dr. Megha.P.Arakeri', 'Dr. Vijaya Kumar B. P'],
+      amount: '$2000',
+      year: '2020',
+      students: [],
+    },
+  ]
+
   return (
     <>
       <Head>
         <title>Projects - IEEE | Computational Intelligence Society</title>
       </Head>
       <Header />
-      <section class="body-font py-16 text-gray-600">
-        <div class="mb-10 text-center">
-          <h1 class="title-font mb-4 text-center text-2xl font-semibold text-gray-900 sm:text-3xl">
-            List of <span class="text-sky-600">Projects</span>
-          </h1>
-          <p className="text-center">
-            Following are the list of funded projects <br></br>of IEEE CIS
-            members
-          </p>
-        </div>
-        <div class="flex flex-col lg:overflow-x-hidden ">
-          <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-              <div class="overflow-hidden">
-                <table class="ml-3 min-w-full border-2">
-                  <thead class="border-b-2 border-t-2">
-                    <tr>
-                      <th
-                        scope="col"
-                        class="border-r px-6 py-4 text-left text-sm font-bold text-gray-900"
-                      >
-                        S.NO
-                      </th>
-                      <th
-                        scope="col"
-                        class="w-64 border-r px-6 py-4 text-left text-sm font-bold text-gray-900"
-                      >
-                        Project title
-                      </th>
-                      <th
-                        scope="col"
-                        class="border-r px-6 py-4 text-left text-sm font-bold text-gray-900"
-                      >
+      <section className="py-16 text-gray-600">
+        <div className="container mx-auto px-4">
+          <div className="mb-12 text-center">
+            <h1 className="mb-4 text-3xl font-bold text-gray-900 sm:text-4xl">
+              Our <span className="text-sky-600">Projects</span>
+            </h1>
+            <div className="mx-auto mb-8 h-1 w-24 rounded bg-sky-600"></div>
+            <p className="mx-auto max-w-lg text-center text-lg text-gray-600">
+              Funded projects of IEEE CIS members that demonstrate innovation
+              and commitment to technological advancement
+            </p>
+          </div>
+
+          <div className="mx-auto max-w-6xl">
+            {projects.map((project) => (
+              <div
+                key={project.id}
+                className="mb-8 overflow-hidden rounded-lg border border-gray-200 bg-white shadow-md"
+              >
+                <div className="flex flex-wrap items-center border-b border-gray-200 bg-gray-50 px-6 py-3">
+                  <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-sky-600 text-lg font-bold text-white">
+                    {project.id}
+                  </div>
+                  <h2 className="flex-1 text-lg font-bold text-gray-800">
+                    {project.title}
+                  </h2>
+                  <div className="mt-2 flex items-center lg:mt-0">
+                    <span className="mr-2 rounded-full bg-sky-100 px-3.5 py-1 text-sm font-medium text-sky-800">
+                      {project.year}
+                    </span>
+                    <span className="rounded-full bg-green-100 px-3.5 py-1 text-sm font-medium text-green-800">
+                      {project.amount}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="px-6 py-4">
+                  <div className="grid gap-4 md:grid-cols-3">
+                    <div>
+                      <h3 className="mb-2 text-sm font-bold uppercase text-gray-500">
                         Funding Organization
-                      </th>
-                      <th
-                        scope="col"
-                        class="border-r px-6 py-4 text-left text-sm font-bold text-gray-900"
-                      >
+                      </h3>
+                      <p className="text-gray-800">{project.funding}</p>
+                    </div>
+
+                    <div>
+                      <h3 className="mb-2 text-sm font-bold uppercase text-gray-500">
                         Coordinators
-                      </th>
-                      <th
-                        scope="col"
-                        class="border-r px-6 py-4 text-left text-sm font-bold text-gray-900"
-                      >
-                        Amount
-                      </th>
-                      <th
-                        scope="col"
-                        class="border-r px-6 py-4 text-left text-sm font-bold text-gray-900"
-                      >
-                        Year
-                      </th>
-                      <th
-                        scope="col"
-                        class="border-r px-6 py-4 text-left text-sm font-bold text-gray-900"
-                      >
-                        Students
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr class="border-b-2 bg-white">
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-medium text-gray-900">
-                        1
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Development of Solar Powered Information Kiosk for Rural
-                        <br></br>
-                        Community Empowerment in South Karnataka
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        IEEE
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Dr. Megha.P.Arakeri
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        $4796
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        2022
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Aastha Singh<br/>Amitesh Verma<br/>Amith M<br/>Ayush Jain<br/>Bhavya<br/>
-                        Dhatvik<br/>Divyam<br/>Nanditha S<br/>Rohan<br/>Samprathi H<br/>Shilpa H
-                      </td>
-                    </tr>
-                    <tr class="border-b-2 font-semibold">
-                      <td class="whitespace-nowrap border-r border-l px-6 py-4 text-sm font-medium text-gray-900">
-                        2
-                      </td>
-                      <td class="whitespace-normal border-r px-6 py-4 text-sm font-semibold text-gray-900 ">
-                        Design and Development of Head-Mounted Assistive Device
-                        for the Blind Using Computer Vision
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        IEEE
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Dr. Megha.P.Arakeri
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        $4,400.29
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        2022
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Dhatvik M.P<br/>Kavan A.V<br/>Nandan<br/>Jayant<br/>Iram>
-                      </td>
-                    </tr>
-                    <tr class="border-b-2 bg-white">
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-medium text-gray-900">
-                        3
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Local Industry Interactions
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        IEEE CIS
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Dr.Vijaya Kumar B.P<br></br> Dr. Sumana. M<br></br> Dr.
-                        Megha.P.Arakeri
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        $3988.66
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        2021
-                      </td>
-                    </tr>
-                    <tr class="border-b-2 bg-white">
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-medium text-gray-900">
-                        4
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        High School Outreach Program
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        IEEE CIS
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Dr. Megha.P.Arakeri<br></br> Dr. Vijaya Kumar B. P
-                        <br></br> Dr. Sumana. M
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        $1500
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        2021
-                      </td>
-                    </tr>
-                    <tr class="border-b-2 bg-white">
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-medium text-gray-900">
-                        5
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Local Industry Interactions
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        IEEE CIS
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Dr.Vijaya Kumar B.P<br></br>Dr. Megha.P.Arakeri
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        $1570.85
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        2020
-                      </td>
-                    </tr>
-                    <tr class="border-b-2 bg-white">
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-medium text-gray-900">
-                        6
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        High School Outreach Program
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        IEEE CIS
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        Dr. Megha.P.Arakeri<br></br> Dr. Vijaya Kumar B. P
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        $2000
-                      </td>
-                      <td class="whitespace-nowrap border-r px-6 py-4 text-sm font-semibold text-gray-900">
-                        2020
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                      </h3>
+                      <ul className="space-y-1">
+                        {project.coordinators.map((coordinator, idx) => (
+                          <li key={idx} className="text-gray-800">
+                            {coordinator}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {project.students.length > 0 && (
+                      <div>
+                        <h3 className="mb-2 text-sm font-bold uppercase text-gray-500">
+                          Student and Faculty Participants
+                        </h3>
+                        <div className="flex flex-wrap gap-2">
+                          {project.students.map((student, idx) => (
+                            <span
+                              key={idx}
+                              className="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700"
+                            >
+                              {student}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
-
       <Footer />
     </>
   )

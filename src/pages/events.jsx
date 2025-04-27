@@ -1,313 +1,184 @@
+'use client'
 import Head from 'next/head'
-import Link from 'next/link'
-
-import { AuthLayout } from '@/components/AuthLayout'
-import { Input } from '@/components/Input'
-import { Logo } from '@/components/Logo'
-import Image from 'next/image'
+import { useEffect } from 'react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer1'
-
-import { ButtonLink } from '@/components/Button'
-import { SectionHeading } from '@/components/SectionHeading'
 import { Container } from '@/components/Cointainer1'
-// import Event1 from '..documents/Event_Report_2020.pdf'
 
-export default function Login() {
-  const onButtonClick = () => {
-    // using Java Script method to get PDF file
-    fetch('/documents/Event_Report_2020.pdf').then((response) => {
+export default function Events() {
+  const events = [
+    {
+      id: 1,
+      year: '2024',
+      title: 'Events 2024',
+      description: 'Activities conducted for the year 2023-2024 under IEEE CIS',
+      hasDownload: false,
+      hasView: true,
+      viewPath: '/events-2024',
+      downloadPath: null,
+      downloadFilename: null,
+      viewDocPath: null,
+    },
+    {
+      id: 2,
+      year: '2023',
+      title: 'Events 2023',
+      description: 'Practical Approaches in Computational Intelligence.',
+      hasDownload: true,
+      hasView: true,
+      viewPath: null,
+      downloadPath: '/documents/Web_Pagefor_IEEE-CIS Summer School.pdf',
+      downloadFilename: 'Event_Report_2023.pdf',
+      viewDocPath: '/documents/Web_Pagefor_IEEE-CIS Summer School.docx',
+    },
+    {
+      id: 3,
+      year: '2021',
+      title: 'Events 2021',
+      description: 'Activities conducted for the year 2021 under IEEE CIS.',
+      hasDownload: true,
+      hasView: true,
+      viewPath: null,
+      downloadPath: '/documents/Event_Report_2021.pdf',
+      downloadFilename: 'Event_Report_2021.pdf',
+      viewDocPath: '/documents/Event_Report_2021.pdf',
+    },
+    {
+      id: 4,
+      year: '2020',
+      title: 'Events 2020',
+      description: 'Activities conducted for the year 2019-2020 under IEEE CIS',
+      hasDownload: true,
+      hasView: true,
+      viewPath: null,
+      downloadPath: '/documents/Event_Report_2020.pdf',
+      downloadFilename: 'Event_Report_2020.pdf',
+      viewDocPath: '/documents/Event_Report_2020.pdf',
+    },
+  ]
+
+  const handleDownload = (path, filename) => {
+    fetch(path).then((response) => {
       response.blob().then((blob) => {
-        // Creating new object of PDF file
         const fileURL = window.URL.createObjectURL(blob)
-        // Setting various property values
         let alink = document.createElement('a')
         alink.href = fileURL
-        alink.download = 'Event_Report_2020.pdf'
+        alink.download = filename
         alink.click()
       })
     })
   }
-  const onButtonClick2 = () => {
-    // using Java Script method to get PDF file
-    fetch('/documents/Event_Report_2021.pdf').then((response) => {
-      response.blob().then((blob) => {
-        // Creating new object of PDF file
-        const fileURL = window.URL.createObjectURL(blob)
-        // Setting various property values
-        let alink = document.createElement('a')
-        alink.href = fileURL
-        alink.download = 'Event_Report_2021.pdf'
-        alink.click()
-      })
-    })
-  }
-  const onButtonClick3 = () => {
-    // using Java Script method to get PDF file
-    fetch('/documents/Web_Pagefor_IEEE-CIS Summer School.pdf').then((response) => {
-      response.blob().then((blob) => {
-        // Creating new object of PDF file
-        const fileURL = window.URL.createObjectURL(blob)
-        // Setting various property values
-        let alink = document.createElement('a')
-        alink.href = fileURL
-        alink.download = 'Event_Report_2021.pdf'
-        alink.click()
-      })
-    })
-  }
+
   return (
-    <>
-      <div className="neumorphismbg">
-        <Head>
-          <title>Events - IEEE | Computational Intelligence Society</title>
-        </Head>
-        <Header />
-        <section className="mt-10 py-5 sm:py-8">
-          <Container>
-            <div className="mx-auto max-w-2xl sm:text-center">
-              <h2 className="text-center text-3xl font-semibold tracking-tight text-sky-600">
-                Events :
-              </h2>
-              <p className="text-centre mt-2 px-3 text-sm text-gray-600 lg:text-base">
-                Following activities are conducted to enhance the technical
-                knowledge in the areas of computational intelligence, machine
-                learning, Artificial Intelligence, Soft Computing for
-                professionals, faculty and students of engineering courses.
-              </p>
-            </div>
-            <ul
-              role="list"
-              className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-10 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-2"
-            >
-              <li className="neumorphism mb-10  rounded-2xl border border-gray-200 p-5">
-                <h3 className="text-center text-3xl font-semibold text-gray-900">
-                  Events 2020
-                </h3>
-                <p className="mt-2 text-center text-gray-700">
-                  Activities conducted for the year 2019-2020 under IEEE CIS
-                </p>
-                <div class="flex justify-center overflow-hidden p-2 ">
-                  <div class="space-y-2 rounded-lg border border-gray-200 p-4 sm:-mx-1 sm:flex sm:space-y-0">
-                    <button
-                      onClick={onButtonClick}
-                      class="flex w-full transform items-center justify-center rounded-md bg-blue-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="mx-1 h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
-                        />
-                      </svg>
-                      <span class="mx-1">Download</span>
-                    </button>
+    <div className="neumorphismbg min-h-screen">
+      <Head>
+        <title>Events - IEEE | Computational Intelligence Society</title>
+      </Head>
 
-                    <a
-                      href="/documents/Event_Report_2020.pdf"
-                      target="_blank"
-                      rel="noreferrer"
-                      class="flex w-full transform items-center justify-center rounded-md bg-blue-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="mx-1 h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                        />
-                      </svg>
-                      <span class="mx-1">View</span>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li className="neumorphism mb-10 rounded-2xl border border-gray-200 p-5">
-                <h3 className="text-center text-3xl font-semibold text-gray-900">
-                  Events 2021
-                </h3>
-                <p className="mt-2 text-center text-gray-700">
-                  Activities conducted for the year 2021 under IEEE CIS.
-                </p>
-                <div class="flex justify-center overflow-hidden p-2 ">
-                  <div class="space-y-2 rounded-lg border border-gray-200 p-4 sm:-mx-1 sm:flex sm:space-y-0">
-                    <button
-                      onClick={onButtonClick2}
-                      class="flex w-full transform items-center justify-center rounded-md bg-blue-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="mx-1 h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
-                        />
-                      </svg>
-                      <span class="mx-1">Download</span>
-                    </button>
+      <Header />
 
-                    <a
-                      href="/documents/Event_Report_2021.pdf"
-                      target="_blank"
-                      rel="noreferrer"
-                      class="flex w-full transform items-center justify-center rounded-md bg-blue-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="mx-1 h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                        />
-                      </svg>
-                      <span class="mx-1">View</span>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li className="neumorphism mb-10 rounded-2xl border border-gray-200 p-5">
-                <h3 className="text-center text-3xl font-semibold text-gray-900">
-                  Events 2023
-                </h3>
-                <p className="mt-2 text-center text-gray-700">
-                  Practical Approaches in Computational Intelligence.
-                </p>
-                <div class="flex justify-center overflow-hidden p-2 ">
-                  <div class="space-y-2 rounded-lg border border-gray-200 p-4 sm:-mx-1 sm:flex sm:space-y-0">
-                    <button
-                      onClick={onButtonClick3}
-                      class="flex w-full transform items-center justify-center rounded-md bg-blue-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="mx-1 h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
-                        />
-                      </svg>
-                      <span class="mx-1">Download</span>
-                    </button>
+      <main className="py-16">
+        <Container>
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <h1 className="mb-4 text-4xl font-bold tracking-tight text-sky-600">
+              IEEE CIS Events
+            </h1>
+            <p className="mx-auto max-w-2xl text-gray-600">
+              Following activities are conducted to enhance the technical
+              knowledge in the areas of computational intelligence, machine
+              learning, Artificial Intelligence, Soft Computing for
+              professionals, faculty and students of engineering courses.
+            </p>
+          </div>
 
-                    <a
-                      href="/documents/Web_Pagefor_IEEE-CIS Summer School.docx"
-                      target="_blank"
-                      rel="noreferrer"
-                      class="flex w-full transform items-center justify-center rounded-md bg-blue-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="mx-1 h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 lg:grid-cols-2">
+            {events.map((event) => (
+              <div
+                key={event.id}
+                className="neumorphism overflow-hidden rounded-2xl border border-gray-200 bg-white transition-all duration-300 hover:shadow-lg"
+              >
+                <div className="relative">
+                  <div className="h-2 bg-blue-600"></div>
+                  {/* Removed the year circle that was here */}
+                </div>
+
+                <div className="p-8">
+                  <h2 className="mb-3 text-2xl font-semibold text-gray-800">
+                    {event.title}
+                  </h2>
+
+                  <p className="mb-8 min-h-[3rem] text-gray-600">
+                    {event.description}
+                  </p>
+
+                  <div className="mt-auto flex flex-col gap-3 sm:flex-row sm:items-center">
+                    {event.hasDownload && (
+                      <button
+                        onClick={() =>
+                          handleDownload(
+                            event.downloadPath,
+                            event.downloadFilename
+                          )
+                        }
+                        className="flex items-center justify-center rounded-lg bg-blue-600 px-5 py-2.5 font-medium text-white transition-colors duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                        />
-                      </svg>
-                      <span class="mx-1">View</span>
-                    </a>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="mr-2 h-5 w-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
+                          />
+                        </svg>
+                        Download
+                      </button>
+                    )}
+
+                    {event.hasView && (
+                      <a
+                        href={event.viewPath || event.viewDocPath}
+                        target={event.viewDocPath ? '_blank' : ''}
+                        rel={event.viewDocPath ? 'noreferrer' : ''}
+                        className="flex items-center justify-center rounded-lg bg-sky-500 px-5 py-2.5 font-medium text-white transition-all duration-300 hover:bg-sky-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="mr-2 h-5 w-5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                          />
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                          />
+                        </svg>
+                        View
+                      </a>
+                    )}
                   </div>
                 </div>
-              </li>
-              <li className="neumorphism mb-10  rounded-2xl border border-gray-200 p-5">
-                <h3 className="text-center text-3xl font-semibold text-gray-900">
-                  Events 2024
-                </h3>
-                <p className="mt-2 text-center text-gray-700">
-                  Activities conducted for the year 2023-2024 under IEEE CIS
-                </p>
-                <div class="flex justify-center overflow-hidden p-2 ">
-                  <div class="space-y-2 rounded-lg border border-gray-200 p-4 sm:-mx-1 sm:flex sm:space-y-0">
-                  
-                    <a
-                      href="/events-2024"
-                      class="flex w-full transform items-center justify-center rounded-md bg-blue-600 px-7 py-1.5 text-base text-white shadow-lg transition-colors duration-300 hover:bg-blue-500 focus:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 sm:mx-1 sm:w-auto"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="mx-1 h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                        />
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                        />
-                      </svg>
-                      <span class="mx-1">View</span>
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </Container>
-        </section>
-        <Footer />
-      </div>
-    </>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </main>
+
+      <Footer />
+    </div>
   )
 }
-import { useId } from 'react'

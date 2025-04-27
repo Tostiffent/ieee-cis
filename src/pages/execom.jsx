@@ -111,21 +111,27 @@ export default function Login() {
               <div class="-m-2 flex flex-wrap justify-center">
                 {members.map((member) => (
                   <div class="w-full p-2 md:w-1/2 lg:w-1/3">
-                    <div class="flex h-full items-center rounded-lg border border-gray-200 p-4 shadow-md">
-                      <Image
-                        alt="team"
-                        class="mr-4 h-16 w-16 flex-shrink-0 rounded-full bg-gray-100 object-cover object-center"
-                        src={member.image}
-                        height={64}
-                        width={64}
-                      />
-                      <div class="flex-grow">
-                        <h2 class="title-font font-semibold text-gray-900">
-                          {member.name}
-                        </h2>
-                        <p class="text-gray-500">{member.designation}</p>
+                    <a
+                      href={member.profile}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <div class="flex h-full cursor-pointer items-center rounded-lg border border-gray-200 p-4 shadow-md transition-colors hover:bg-gray-50">
+                        <Image
+                          alt="team"
+                          class="mr-4 h-16 w-16 flex-shrink-0 rounded-full bg-gray-100 object-cover object-center"
+                          src={member.image}
+                          height={64}
+                          width={64}
+                        />
+                        <div class="flex-grow">
+                          <h2 class="title-font font-semibold text-gray-900">
+                            {member.name}
+                          </h2>
+                          <p class="text-gray-500">{member.designation}</p>
+                        </div>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 ))}
               </div>

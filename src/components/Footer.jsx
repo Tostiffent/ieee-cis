@@ -33,9 +33,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/newsletter">
+                <Link href="/reports">
                   <a className="rounded-lg px-2 py-1 text-slate-700 hover:bg-slate-100 hover:text-slate-900">
-                    Newsletter
+                    Reports
                   </a>
                 </Link>
               </li>

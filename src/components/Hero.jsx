@@ -96,7 +96,7 @@ export function Hero() {
         ))}
       </Swiper>
       <Container className="pt-5 pb-16 text-center lg:pt-8">
-        <p class="mx-auto mt-5 max-w-3xl rounded-xl bg-slate-100 p-2 text-xl tracking-tight text-slate-800">
+        <p className="mx-auto mt-5 max-w-3xl rounded-xl bg-slate-100 p-2 text-xl tracking-tight text-slate-800">
           <b>IEEE Computational Intelligence Society (CIS)</b> is a professional
           society of IEEE focusing on “the theory, design, application, and
           development of biologically and linguistically motivated computational

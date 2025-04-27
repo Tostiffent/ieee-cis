@@ -59,62 +59,62 @@ export default function officebearers() {
         </title>
       </Head>
       <Header />
-      <section class="bg-white ">
-        <div class="mx-auto max-w-screen-xl py-8 px-4 lg:py-8 lg:px-6 ">
-          <div class="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
-            <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900">
-              Our <span class="text-sky-600">Executive Team</span>
+      <section className="bg-white ">
+        <div className="mx-auto max-w-screen-xl py-8 px-4 lg:py-8 lg:px-6 ">
+          <div className="mx-auto mb-8 max-w-screen-sm text-center lg:mb-16">
+            <h2 className="mb-4 text-4xl font-bold tracking-tight text-gray-900">
+              Our <span className="text-sky-600">Executive Team</span>
             </h2>
           </div>
-          <div class="mb-6 grid gap-8 md:grid-cols-2 lg:mb-16">
+          <div className="mb-6 grid gap-8 md:grid-cols-2 lg:mb-16">
             {members.map((member) => (
-              <div class="flex flex-col overflow-hidden rounded-lg bg-white shadow-lg">
-                <div class="flex justify-center">
+              <div className="flex flex-col overflow-hidden rounded-lg bg-white shadow-lg">
+                <div className="flex justify-center">
                   <Image
-                    class="flex-shrink-0 rounded-lg object-cover sm:mx-4"
+                    className="flex-shrink-0 rounded-lg object-cover sm:mx-4"
                     src={member.image}
                     width="250px"
                     height="250px"
                   />
                 </div>
-                <div class="flex flex-1 flex-col justify-between p-6">
-                  <div class="flex-1">
-                    <p class="text-md flex justify-center font-medium text-sky-600">
+                <div className="flex flex-1 flex-col justify-between p-6">
+                  <div className="flex-1">
+                    <p className="text-md flex justify-center font-medium text-sky-600">
                       {member.designation}
                     </p>
-                    <div class="mt-2 block">
-                      <p class="flex justify-center text-xl font-semibold text-gray-900">
+                    <div className="mt-2 block">
+                      <p className="flex justify-center text-xl font-semibold text-gray-900">
                         {member.name}
                       </p>
-                      <p class="mt-3 flex justify-center text-center text-base text-gray-500">
+                      <p className="mt-3 flex justify-center text-center text-base text-gray-500">
                         {member.description}
                       </p>
                     </div>
                   </div>
-                  <div class="mt-6 flex items-center justify-center">
-                    <button class="rounded-md bg-sky-600 py-2 px-4 text-white hover:bg-black">
+                  <div className="mt-6 flex items-center justify-center">
+                    <button className="rounded-md bg-sky-600 py-2 px-4 text-white hover:bg-black">
                       <a href={member.profile}>View Profile</a>
                     </button>
                   </div>
                 </div>
               </div>
             ))}
-            {/* <div class="items-center rounded-lg bg-gray-50 shadow dark:border-gray-700 dark:bg-gray-800 sm:flex">
+            {/* <div className="items-center rounded-lg bg-gray-50 shadow dark:border-gray-700 dark:bg-gray-800 sm:flex">
                 <a href="#">
                   <img
-                    class="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
+                    className="w-full rounded-lg sm:rounded-none sm:rounded-l-lg"
                     src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png"
                     alt="Bonnie Avatar"
                   />
                 </a>
-                <div class="p-5">
-                  <h3 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <div className="p-5">
+                  <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                     <a href="#">{member.name}</a>
                   </h3>
-                  <span class="text-gray-500 dark:text-gray-400">
+                  <span className="text-gray-500 dark:text-gray-400">
                     {member.designation}
                   </span>
-                  <p class="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
+                  <p className="mt-3 mb-4 font-light text-gray-500 dark:text-gray-400">
                     {member.description}
                   </p>
                 </div>
